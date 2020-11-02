@@ -1,0 +1,11 @@
+---
+git_config_settings: []
+# - name: alias.ci
+#   scope: global
+#   value: commit
+# - name: alias.remotev
+#   value: remote -v
+# - name: user.email
+#   repo: /etc
+#   scope: local
+#   value: root@root

@@ -1,0 +1,11 @@
+---
+- name: Ensure git config setting is set
+  git_config:
+    name: "{{ item.name }}"
+    repo: "{{ item.repo | d(omit) }}"
+    scope: "{{ item.scope | d('system') }}"
+    state: present
+    value: "{{ item.value }}"
+  loop: "{{ git_config_settings }}"
+  loop_control:
+    label: "{{ item.name }}"

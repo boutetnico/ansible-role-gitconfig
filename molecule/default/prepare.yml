@@ -1,0 +1,27 @@
+---
+- name: Prepare
+  hosts: all
+  vars:
+    git_dependencies:
+      - git
+    git_repo_path: /role_test
+
+  tasks:
+    - name: Install dependencies
+      apt:
+        name: "{{ git_dependencies }}"
+        update_cache: true
+
+    - name: Ensure test repository exists
+      file:
+        group: root
+        mode: 0755
+        owner: root
+        path: "{{ git_repo_path }}"
+        state: directory
+
+    - name: Init test repository
+      shell: git init
+      args:
+        chdir: "{{ git_repo_path }}"
+        creates: .git

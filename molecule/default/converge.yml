@@ -1,0 +1,15 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-git-config
+      git_config_settings:
+        - name: alias.ci
+          scope: global
+          value: commit
+        - name: alias.remotev
+          value: remote -v
+        - name: user.email
+          repo: /role_test
+          scope: local
+          value: root@root
