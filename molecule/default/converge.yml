@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - role: ansible-role-git-config
+    - role: ansible-role-gitconfig
       git_config_settings:
         - name: alias.ci
           scope: global

@@ -1,12 +1,15 @@
-ansible-role-git-config
-=======================
+[![tests](https://github.com/boutetnico/ansible-role-gitconfig/workflows/Test%20ansible%20role/badge.svg)](https://github.com/boutetnico/ansible-role-gitconfig/actions?query=workflow%3A%22Test+ansible+role%22)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-boutetnico.gitconfig-blue.svg)](https://galaxy.ansible.com/boutetnico/gitconfig)
+
+ansible-role-gitconfig
+======================
 
 This role configures git.
 
 Requirements
 ------------
 
-Ansible 2.6 or newer.
+Ansible 2.7 or newer.
 
 Supported Platforms
 -------------------
@@ -33,7 +36,7 @@ Example Playbook
 
     - hosts: all
       roles:
-        - ansible-role-git-config
+        - ansible-role-gitconfig
           git_config_settings:
             - name: alias.ci
               scope: global
