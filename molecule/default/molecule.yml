@@ -7,13 +7,13 @@ driver:
   name: docker
 
 platforms:
-  - name: ansible-role-git-config-debian-9
+  - name: ansible-role-gitconfig-debian-9
     image: debian:9
-  - name: ansible-role-git-config-debian-10
+  - name: ansible-role-gitconfig-debian-10
     image: debian:10
-  - name: ansible-role-git-config-ubuntu-1804
+  - name: ansible-role-gitconfig-ubuntu-1804
     image: ubuntu:18.04
-  - name: ansible-role-git-config-ubuntu-2004
+  - name: ansible-role-gitconfig-ubuntu-2004
     image: ubuntu:20.04
 
 lint: |
