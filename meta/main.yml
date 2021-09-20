@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: gitconfig
+  namespace: boutetnico
   author: Nicolas Boutet
   description: Configure git.
   license: MIT
