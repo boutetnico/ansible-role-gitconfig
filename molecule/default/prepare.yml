@@ -21,7 +21,7 @@
         state: directory
 
     - name: Init test repository
-      ansible.builtin.command: git init  # noqa 303
+      ansible.builtin.command: git init  # noqa command-instead-of-module
       args:
         chdir: "{{ git_repo_path }}"
         creates: .git
