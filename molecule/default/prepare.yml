@@ -8,12 +8,12 @@
 
   tasks:
     - name: Install dependencies
-      apt:
+      ansible.builtin.apt:
         name: "{{ git_dependencies }}"
         update_cache: true
 
     - name: Ensure test repository exists
-      file:
+      ansible.builtin.file:
         group: root
         mode: 0755
         owner: root
@@ -21,7 +21,7 @@
         state: directory
 
     - name: Init test repository
-      command: git init  # noqa 303
+      ansible.builtin.command: git init  # noqa 303
       args:
         chdir: "{{ git_repo_path }}"
         creates: .git

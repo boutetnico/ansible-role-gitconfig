@@ -1,6 +1,6 @@
 ---
 - name: Ensure git config setting is set
-  git_config:
+  community.general.git_config:
     name: "{{ item.name }}"
     repo: "{{ item.repo | d(omit) }}"
     scope: "{{ item.scope | d('system') }}"
