@@ -15,7 +15,7 @@
     - name: Ensure test repository exists
       ansible.builtin.file:
         group: root
-        mode: 0755
+        mode: "0755"
         owner: root
         path: "{{ git_repo_path }}"
         state: directory
